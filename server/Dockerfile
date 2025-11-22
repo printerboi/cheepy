@@ -5,11 +5,11 @@ FROM python:3.9
 WORKDIR /app
 
 # Kopiere die Anforderungen und installiere sie
-COPY requirements.txt .
+COPY ../requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Kopiere den Code in das Container-Image
-COPY . .
+COPY .. .
 
 # Exponiere den Port, auf dem die App läuft
 EXPOSE 8000
